@@ -1,10 +1,19 @@
-import React from  'react';
-import {View,Text} from 'react-native'
+import React from 'react';
+import { View, Text ,Image} from 'react-native'
 import styles from './productCard.style'
 
-const productCard = ({})= {
-    return(
+const productCard = (products) => {
+    return (
 
+
+        <View style = {styles.container}>
+            <View>
+                <Image style={styles.image}
+                source = {{uri:products.imgURL}}/>
+                
+            </View>
+            
+        </View>
 
 
     )

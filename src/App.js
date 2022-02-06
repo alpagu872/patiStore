@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+import productCard from './components/productCard'
 
 import {
   SafeAreaView,
@@ -23,9 +24,18 @@ function App () {
 
 
   return (
-    <SafeAreaView>
+    
+    <SafeAreaView style = {styles.container}>
+      <View>
+        <Text style = {styles.title}>PATIKASTORE</Text>
+      </View>
 
-      <Text>HELLO WORLDD</Text>
+      <View>
+
+      </View>
+      
+
+      
 
 
     </SafeAreaView>
@@ -38,8 +48,16 @@ function App () {
 
 const styles = StyleSheet.create({
   container: {
+    flex:1,
+    backgroundColor: 'white'
 
-    
+
+  },
+  title:{
+    fontSize:36,
+    color:'purple',
+    fontWeight:'bold'
+
   }
 });
 
