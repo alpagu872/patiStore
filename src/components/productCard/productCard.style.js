@@ -5,7 +5,8 @@ export default StyleSheet.create({
     {
         
         flex:1,
-        backgroundColor:'black',
+        backgroundColor:'gray',
+
 
     },
     image: {
