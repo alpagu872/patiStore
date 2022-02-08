@@ -7,7 +7,9 @@
  */
 
 import React from 'react';
-import productCard from './components/productCard'
+import ProductCard from './components/ProductCard'
+import product_data from './product_data.json'
+
 
 import {
   SafeAreaView,
@@ -17,26 +19,32 @@ import {
   Text,
   useColorScheme,
   View,
+  FlatList,
 } from 'react-native';
 
-function App () {
+function App() {
+
+  const renderProduct = ({ item }) => <ProductCard products={item} />
+  const keyRender = (item, index) => item.id.toString()
 
 
 
   return (
-    
-    <SafeAreaView style = {styles.container}>
+
+    <SafeAreaView style={styles.container}>
       <View>
-        <Text style = {styles.title}>PATIKASTORE</Text>
+        <Text style={styles.title}>PATIKASTORE</Text>
       </View>
 
+
       <View>
+        <FlatList
+          data={product_data}
+          keyExtractor={keyRender}
+          renderItem={renderProduct}
 
+        />
       </View>
-      
-
-      
-
 
     </SafeAreaView>
 
@@ -48,15 +56,15 @@ function App () {
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
+    flex: 1,
     backgroundColor: 'white'
 
 
   },
-  title:{
-    fontSize:36,
-    color:'purple',
-    fontWeight:'bold'
+  title: {
+    fontSize: 36,
+    color: 'purple',
+    fontWeight: 'bold'
 
   }
 });
