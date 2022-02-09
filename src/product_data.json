@@ -75,5 +75,12 @@
       "imgURL": "https://images-na.ssl-images-amazon.com/images/I/51kfZ4W9YSL._AC_SX522_.jpg",
       "price": "₺296,00",
       "inStock": true
+    },
+    {
+      "id": 11,
+      "title": "MacBook Pro 14 inç M1 Pro",
+      "imgURL": "https://st-troy.mncdn.com/mnresize/1500/1500/Content/media/ProductImg/original/mkgp3tua-637706783920905820.jpg",
+      "price": "₺26,999,00",
+      "inStock": true
     }
   ]

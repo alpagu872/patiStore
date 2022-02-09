@@ -20,6 +20,7 @@ import {
   useColorScheme,
   View,
   FlatList,
+  TextInput
 } from 'react-native';
 
 function App() {
@@ -27,24 +28,32 @@ function App() {
   const renderProduct = ({ item }) => <ProductCard products={item} />
   const keyRender = (item, index) => item.id.toString()
 
+  const [number, onChangeNumber] = React.useState(null);
+
 
 
   return (
 
     <SafeAreaView style={styles.container}>
-      <View>
+      
         <Text style={styles.title}>PATIKASTORE</Text>
-      </View>
+        <TextInput
+        style={styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder="Ara..."
+      />
+      
 
 
-      <View>
         <FlatList
           data={product_data}
           keyExtractor={keyRender}
           renderItem={renderProduct}
+          numColumns = {2}
 
         />
-      </View>
+      
 
     </SafeAreaView>
 
@@ -57,14 +66,24 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    padding: 10,
 
 
   },
   title: {
-    fontSize: 36,
-    color: 'purple',
-    fontWeight: 'bold'
+    margin: 6,
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: '#9b3799',
+  },
+  input:{
+    height: 40,
+    margin: 12,
+    padding: 1,
+    borderRadius:10,
+    backgroundColor:'#eceff1',
+    textAlign: 'center',
 
   }
 });

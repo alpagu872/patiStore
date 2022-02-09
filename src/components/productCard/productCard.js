@@ -9,24 +9,24 @@ const productCard = ({products}) => {
 
     return (
 
-        <SafeAreaView>
+       
 
             <View style={styles.container}>
 
                 <TouchableOpacity activeOpacity={.3}>
 
-                    <Image style={styles.image} source={{ uri: products.imgURL }} />
+                    <Image style={styles.image} source={{ uri: products.imgURL }} resizeMode={'contain'} />
                     <View style={styles.inner_container}>
                         <Text style={styles.title}>{products.title}</Text>
                         <Text style={styles.price}>{products.price}</Text>
-                        <Text style={styles.instock}> {products.inStock.toString()}</Text>
+                        {!products.inStock ? <Text style={styles.instock}>STOKTA YOK</Text> : null}
                     </View>
                 </TouchableOpacity>
 
             </View>
 
 
-        </SafeAreaView>
+       
 
 
     )

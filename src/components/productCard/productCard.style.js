@@ -1,33 +1,43 @@
-import {StyleSheet, Dimensions} from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 
 export default StyleSheet.create({
-    container: 
+    container: {
+        flex: 1,
+        backgroundColor: 'white',
+    },
+
+    inner_container:
     {
-        backgroundColor: 'gray',
-        margin: 10,
-        borderRadius: 10,
-        
+        flex: 1,
+        margin: 5,
+        padding: 6,
+        paddingTop: 0,
+        borderRadius: 6,
+        backgroundColor: '#eceff1',
 
 
     },
     image: {
+        marginTop: 10,
+        marginBottom: 10,
+        backgroundColor: 'white',
         height: Dimensions.get('window').height / 4,
-        borderTopLeftRadius: 10,
-        borderTopRightRadius: 10,
-
+        borderRadius: 6,
     },
-    title: { 
-        margin: 5,
+    title: {
+        fontSize: 15,
         fontWeight: 'bold',
-        fontSize: 18,
     },
-    price:{
-        margin : 10,
+    price: {
+        marginTop: 3,
+        fontSize: 15,
+        fontWeight: 'bold',
+        color: '#666'
     },
-    instock:{
-        margin : 10,
-        align: 'center',
-        fontColor: 'white',
+    instock: {
+        fontSize: 15,
+        fontWeight: 'bold',
+        color: 'red'
 
     }
 
